@@ -10,19 +10,7 @@ class DataSet
 {
     private $label = null;
     private $data = [];
-    private $options = [
-        'pointStyle' => 'circle',
-        'pointRadius' => 5,
-        'backgroundColor' => [
-            'rgba(6, 214, 160, 0.8)',
-            'rgba(17, 138, 178, 0.8)',
-            'rgba(239, 71, 111, 0.8)',
-            'rgba(255, 209, 102, 0.8)',
-            'rgba(7, 59, 76, 0.8)',
-            'rgba(153, 102, 255, 0.8)',
-            'rgba(201, 203, 207, 0.8)'
-        ]
-    ];
+    private $options = [];
 
     /**
      * DataSet constructor.
@@ -72,7 +60,7 @@ class DataSet
     /**
      * @return array
      */
-    public function getBackgroundColor(): array
+    public function getBackgroundColor()
     {
         return $this->getOption('backgroundColor');
     }
@@ -80,7 +68,7 @@ class DataSet
     /**
      * @param array $backgroundColor
      */
-    public function setBackgroundColor(array $backgroundColor): DataSet
+    public function setBackgroundColor($backgroundColor): DataSet
     {
         $this->setOption('backgroundColor', $backgroundColor);
         return $this;
@@ -97,7 +85,7 @@ class DataSet
     /**
      * @param array $borderColor
      */
-    public function setBorderColor(array $borderColor): DataSet
+    public function setBorderColor($borderColor): DataSet
     {
         $this->setOption('borderColor', $borderColor);
         return $this;
