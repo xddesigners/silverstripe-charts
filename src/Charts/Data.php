@@ -8,8 +8,8 @@ namespace XD\Charts\Charts;
  */
 class Data
 {
-    private $labels = [];
-    private $datasets = [];
+    protected $labels = [];
+    protected $datasets = [];
 
     /**
      * @return array
