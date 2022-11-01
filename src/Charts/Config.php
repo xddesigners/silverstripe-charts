@@ -123,6 +123,45 @@ class Config
         return $this;
     }
 
+    /**
+     * @param $size
+     * @return $this
+     */
+    public function setTitleFontSize($size)
+    {
+        $this->options->setTitleFontSize($size);
+        return $this;
+    }
+
+    /**
+     * @param $padding
+     * @return $this
+     */
+    public function setTitlePadding($padding)
+    {
+        $this->options->setTitlePadding($padding);
+        return $this;
+    }
+
+    /**
+     * @param $padding
+     * @return $this
+     */
+    public function setSubtitlePadding($padding)
+    {
+        $this->options->setSubtitlePadding($padding);
+        return $this;
+    }
+
+    /**
+     * @param $size
+     * @return $this
+     */
+    public function setTitleFontWeight($weight)
+    {
+        $this->options->setTitleFontWeight($weight);
+        return $this;
+    }
 
     /**
      * @param $subtitle
@@ -131,6 +170,46 @@ class Config
     public function setSubtitle($subtitle)
     {
         $this->options->setSubtitle($subtitle);
+        return $this;
+    }
+
+    /**
+     * @param $size
+     * @return $this
+     */
+    public function setSubtitleFontSize($size)
+    {
+        $this->options->setSubtitleFontSize($size);
+        return $this;
+    }
+
+    /**
+     * @param $weight
+     * @return $this
+     */
+    public function setSubtitleFontWeight($weight)
+    {
+        $this->options->setSubtitleFontWeight($weight);
+        return $this;
+    }
+
+    /**
+     * @param $title
+     * @return $this
+     */
+    public function setXScaleTitle($title)
+    {
+        $this->options->setXScaleTitle($title);
+        return $this;
+    }
+
+    /**
+     * @param $title
+     * @return $this
+     */
+    public function setYScaleTitle($title)
+    {
+        $this->options->setYScaleTitle($title);
         return $this;
     }
 
@@ -182,6 +261,36 @@ class Config
     public function setLegendLabelSize($width, $height)
     {
         $this->options->setLegendLabelSize($width, $height);
+        return $this;
+    }
+
+    /**
+     * @param $size
+     * @return $this
+     */
+    public function setLegendLabelFontSize($size)
+    {
+        $this->options->setLegendLabelFontSize($size);
+        return $this;
+    }
+
+    /**
+     * @param $padding
+     * @return $this
+     */
+    public function setLegendLabelPadding($padding)
+    {
+        $this->options->setLegendLabelPadding($padding);
+        return $this;
+    }
+
+    /**
+     * @param $align
+     * @return $this
+     */
+    public function setLegendAlign($align)
+    {
+        $this->options->setLegendAlign($align);
         return $this;
     }
 
