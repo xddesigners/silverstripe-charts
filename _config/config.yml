@@ -1,3 +1,7 @@
 ---
 Name: charts
 ---
+#XD\Charts\Charts\Chart:
+#  chart_defaults:
+#    'Chart.defaults.font.size': 12
+#    'Chart.defaults.font.family': 'futura'
