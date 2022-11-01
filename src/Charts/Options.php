@@ -80,12 +80,72 @@ class Options
     }
 
     /**
+     * @param $size
+     * @return $this
+     */
+    public function setTitleFontSize($size)
+    {
+        $this->setOption('plugins.title.font.size', $size);
+        return $this;
+    }
+
+    /**
+     * @param $size
+     * @return $this
+     */
+    public function setTitleFontWeight($weight)
+    {
+        $this->setOption('plugins.title.font.weight', $weight);
+        return $this;
+    }
+
+    /**
+     * @param $padding
+     * @return $this
+     */
+    public function setTitlePadding($padding)
+    {
+        $this->setOption('plugins.title.padding', $padding);
+        return $this;
+    }
+
+    /**
      * @param $subtitle
      * @return $this
      */
     public function setSubtitle($subtitle)
     {
         $this->setOption('plugins.subtitle', ['display' => true, 'text' => $subtitle]);
+        return $this;
+    }
+
+    /**
+     * @param $weight
+     * @return $this
+     */
+    public function setSubtitleFontWeight($weight)
+    {
+        $this->setOption('plugins.subtitle.font.weight', $weight);
+        return $this;
+    }
+
+    /**
+     * @param $size
+     * @return $this
+     */
+    public function setSubtitleFontSize($size)
+    {
+        $this->setOption('plugins.subtitle.font.size', $size);
+        return $this;
+    }
+
+    /**
+     * @param $padding
+     * @return $this
+     */
+    public function setSubtitlePadding($padding)
+    {
+        $this->setOption('plugins.subtitle.padding', $padding);
         return $this;
     }
 
@@ -120,6 +180,26 @@ class Options
     }
 
     /**
+     * @param $title
+     * @return $this
+     */
+    public function setXScaleTitle($title)
+    {
+        $this->setOption('scales.x.title', ['display' => true, 'text' => $title]);
+        return $this;
+    }
+
+    /**
+     * @param $title
+     * @return $this
+     */
+    public function setYScaleTitle($title)
+    {
+        $this->setOption('scales.y.title', ['display' => true, 'text' => $title]);
+        return $this;
+    }
+
+    /**
      * @param $padding
      * @return $this
      */
@@ -139,6 +219,38 @@ class Options
         $this->setOption('plugins.legend.labels', ['boxWidth' => $width, 'boxHeight' => $height]);
         return $this;
     }
+
+    /**
+     * @param $width
+     * @param $height
+     * @return $this
+     */
+    public function setLegendLabelFontSize($size)
+    {
+        $this->setOption('plugins.legend.labels.font.size', $size);
+        return $this;
+    }
+
+    /**
+     * @param $padding
+     * @return $this
+     */
+    public function setLegendLabelPadding($padding)
+    {
+        $this->setOption('plugins.legend.labels.padding', $padding);
+        return $this;
+    }
+
+    /**
+     * @param $align
+     * @return $this
+     */
+    public function setLegendAlign($align)
+    {
+        $this->setOption('plugins.legend.align', $align);
+        return $this;
+    }
+
 
     /**
      * @return array
