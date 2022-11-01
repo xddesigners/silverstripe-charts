@@ -11,7 +11,16 @@ use SilverStripe\View\ViewableData;
  */
 class Chart extends ViewableData
 {
-    private $config;
+    const TYPE_BAR = 'bar';
+    const TYPE_PIE = 'pie';
+    const TYPE_DOUGHNUT = 'doughnut';
+    const TYPE_RADAR = 'radar';
+    const TYPE_POLARAREA = 'polarArea';
+    const TYPE_SCATTER = 'scatter';
+    const TYPE_BUBBLE = 'bubble';
+
+    protected $config;
+    private static $chart_defaults = [];
 
     /**
      * Chart constructor.
@@ -83,6 +92,21 @@ class Chart extends ViewableData
      */
     public function forTemplate()
     {
+        $defaults = self::config()->get('chart_defaults');
+        $script = '';
+        foreach ($defaults as $key => $value) {
+            $script .= $key . '=';
+            $script .= is_string($value) ? "'$value';" : "$value;";
+        }
+        Requirements::customScript(
+            <<<JS
+                $script
+                drawCharts();
+            JS
+            ,
+            'chart-defaults'
+        );
+
         Requirements::javascript('xddesigners/silverstripe-charts:js/chartjs/chart.js');
         Requirements::javascript('xddesigners/silverstripe-charts:js/chart.js');
         return $this->renderWith('XD\\Charts\\Charts\\Chart');
