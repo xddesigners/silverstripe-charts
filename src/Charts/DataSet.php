@@ -10,7 +10,9 @@ class DataSet
 {
     private $label = null;
     private $data = [];
-    private $options = [];
+    private $options = [
+        'borderWidth' => 1
+    ];
 
     /**
      * DataSet constructor.
@@ -58,7 +60,17 @@ class DataSet
     }
 
     /**
-     * @return array
+     * @param $type
+     * @return $this
+     */
+    public function setType($type): DataSet
+    {
+        $this->setOption('type', $type);
+        return $this;
+    }
+
+    /**
+     * @return bool
      */
     public function getBackgroundColor()
     {

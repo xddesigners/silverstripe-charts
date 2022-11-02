@@ -244,6 +244,16 @@ class Config
     }
 
     /**
+     * @param $align
+     * @return $this
+     */
+    public function setLegendTitleAlign($align)
+    {
+        $this->options->setLegendTitleAlign($align);
+        return $this;
+    }
+
+    /**
      * @param $padding
      * @return $this
      */
@@ -291,6 +301,16 @@ class Config
     public function setLegendAlign($align)
     {
         $this->options->setLegendAlign($align);
+        return $this;
+    }
+
+    /**
+     * @param bool $bool
+     * @return $this
+     */
+    public function showDataLabels($bool = true)
+    {
+        $this->options->showDataLabels($bool);
         return $this;
     }
 

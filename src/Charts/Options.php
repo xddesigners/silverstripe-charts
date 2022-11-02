@@ -13,7 +13,8 @@ class Options
         'maintainAspectRatio' => false,
         'layout' => [
             'padding' => 20
-        ]
+        ],
+        'showDataLabels' => false
     ];
 
     /**
@@ -179,6 +180,12 @@ class Options
         return $this;
     }
 
+    public function setLegendTitleAlign($align)
+    {
+        $this->setOption('plugins.legend.title.align', $align);
+        return $this;
+    }
+
     /**
      * @param $title
      * @return $this
@@ -196,6 +203,16 @@ class Options
     public function setYScaleTitle($title)
     {
         $this->setOption('scales.y.title', ['display' => true, 'text' => $title]);
+        return $this;
+    }
+
+    /**
+     * @param $bool
+     * @return $this
+     */
+    public function showDataLabels($bool)
+    {
+        $this->setOption('showDataLabels', $bool);
         return $this;
     }
 
@@ -251,6 +268,16 @@ class Options
         return $this;
     }
 
+    public function setUseHTMLLegend($bool = true, $containerID = 'legend-container')
+    {
+        $this->setOption('plugins.htmlLegend', [
+            'containerID' => $containerID
+        ]);
+        $this->setOption('plugins.legend', [
+            'display' => !$bool
+        ]);
+        return $this;
+    }
 
     /**
      * @return array

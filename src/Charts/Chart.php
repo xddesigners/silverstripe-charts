@@ -100,14 +100,14 @@ class Chart extends ViewableData
         }
         Requirements::customScript(
             <<<JS
-                $script
-                drawCharts();
-            JS
+            $script
+            drawCharts();
+JS
             ,
             'chart-defaults'
         );
-
-        Requirements::javascript('xddesigners/silverstripe-charts:js/chartjs/chart.js');
+        Requirements::javascript('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js');
+        Requirements::javascript('https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0');
         Requirements::javascript('xddesigners/silverstripe-charts:js/chart.js');
         return $this->renderWith('XD\\Charts\\Charts\\Chart');
     }

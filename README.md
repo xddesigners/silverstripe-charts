@@ -42,6 +42,12 @@ if( $type=='line' ) {
     $config->setOption('scales.y.stacked',true);
 }
 
+if (in_array($type, ['pie'])) {
+    $config->showDataLabels();
+    $config->setOption('plugins.datalabels.anchor','end');
+    $config->setOption('plugins.datalabels.align','end');
+}
+
 // radar example options
 if( $type=='radar' ) {
     $config->setOption('scales.r.angleLines.color','red');
