@@ -6,7 +6,8 @@
     "silverstripe",
     "CMS",
     "charts",
-    "chartjs"
+    "chartjs",
+    "silverstripe-module"
   ],
   "license": "BSD-3-Clause",
   "extra": {
