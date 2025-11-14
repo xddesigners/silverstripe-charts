@@ -3,13 +3,13 @@
 namespace XD\Charts\Charts;
 
 use SilverStripe\View\Requirements;
-use SilverStripe\View\ViewableData;
+use SilverStripe\Model\ModelData;
 
 /**
  * Class Chart
  * @package XD\Charts\Charts
  */
-class Chart extends ViewableData
+class Chart extends ModelData
 {
     const TYPE_BAR = 'bar';
     const TYPE_PIE = 'pie';
@@ -90,7 +90,7 @@ class Chart extends ViewableData
     /**
      * @return \SilverStripe\ORM\FieldType\DBHTMLText
      */
-    public function forTemplate()
+    public function forTemplate(): string
     {
         $defaults = self::config()->get('chart_defaults');
         $script = '';
